@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Educational Management System Design System 
+All colors MUST be HSL for consistency and theming.
+*/
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+
+    /* Card and surface colors */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    /* Popover colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Primary - Deep Blue (Educational Trust) */
+    --primary: 217 91% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 217 91% 40%;
+
+    /* Secondary - Light Blue Gray */
+    --secondary: 210 20% 95%;
+    --secondary-foreground: 215 25% 27%;
+
+    /* Success - Vibrant Green (Growth & Learning) */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    /* Warning - Amber */
+    --warning: 43 96% 56%;
+    --warning-foreground: 26 83% 14%;
+
+    /* Muted colors */
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - Teal */
+    --accent: 173 80% 40%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border and input */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 35%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg,
+        hsl(217 91% 35%),
+        hsl(173 80% 40%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    --gradient-success: linear-gradient(135deg,
+        hsl(142 76% 36%),
+        hsl(160 84% 39%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 27% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 27% / 0.1),
+      0 2px 4px -1px hsl(215 25% 27% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 27% / 0.1),
+      0 4px 6px -2px hsl(215 25% 27% / 0.05);
+    --shadow-glow: 0 0 40px hsl(217 91% 35% / 0.15);
+
+    /* Status Colors */
+    --status-active: 142 76% 36%;
+    --status-inactive: 215 16% 47%;
+    --status-transferred: 217 91% 60%;
+    --status-graduated: 262 83% 58%;
+    --status-pending: 43 96% 56%;
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Base colors - Rich dark background with improved contrast */
+    --background: 220 26% 9%;
+    --foreground: 213 31% 91%;
+
+    /* Card and surface colors - Slightly elevated surfaces */
+    --card: 220 22% 12%;
+    --card-foreground: 213 31% 91%;
+
+    /* Popover colors */
+    --popover: 220 24% 11%;
+    --popover-foreground: 213 31% 91%;
+
+    /* Primary - Bright Blue (stands out in dark mode) */
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 26% 9%;
+    --primary-hover: 217 91% 65%;
+
+    /* Secondary - Elevated surface with subtle blue tint */
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 213 31% 91%;
+
+    /* Success - Vibrant Green (high contrast) */
+    --success: 142 76% 50%;
+    --success-foreground: 220 26% 9%;
+
+    /* Warning - Bright Amber */
+    --warning: 43 96% 60%;
+    --warning-foreground: 220 26% 9%;
+
+    /* Muted colors - Better readability */
+    --muted: 220 18% 20%;
+    --muted-foreground: 215 16% 65%;
+
+    /* Accent - Bright Teal */
+    --accent: 173 80% 50%;
+    --accent-foreground: 220 26% 9%;
+
+    /* Destructive - Bright Red for visibility */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 213 31% 91%;
+
+    /* Border and input - Subtle but visible */
+    --border: 220 20% 22%;
+    --input: 220 20% 22%;
+    --ring: 217 91% 60%;
+
+    /* Gradients for dark mode */
+    --gradient-primary: linear-gradient(135deg,
+        hsl(217 91% 60%),
+        hsl(173 80% 50%));
+    --gradient-card: linear-gradient(180deg,
+        hsl(220 22% 12%),
+        hsl(220 22% 14%));
+    --gradient-success: linear-gradient(135deg,
+        hsl(142 76% 50%),
+        hsl(160 84% 55%));
+
+    /* Shadows for depth in dark mode */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4),
+      0 2px 4px -1px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5),
+      0 4px 6px -2px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
+
+    /* Status Colors - Optimized for dark mode */
+    --status-active: 142 76% 50%;
+    --status-inactive: 215 16% 55%;
+    --status-transferred: 217 91% 65%;
+    --status-graduated: 262 83% 68%;
+    --status-pending: 43 96% 60%;
+
+    /* Sidebar - Dark with depth */
+    --sidebar-background: 220 26% 8%;
+    --sidebar-foreground: 213 31% 88%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 220 26% 9%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 213 31% 88%;
+    --sidebar-border: 220 20% 16%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark-blue {
+    /* Base colors - Deep rich blue-tinted background with excellent contrast */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    /* Card and surface colors - Elevated surfaces with depth */
+    --card: 220 38% 14%;
+    --card-foreground: 210 40% 98%;
+
+    /* Popover colors - Slightly elevated for distinction */
+    --popover: 220 40% 13%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary - Vibrant Blue (perfect contrast in dark mode) */
+    --primary: 217 91% 65%;
+    --primary-foreground: 222 47% 11%;
+    --primary-hover: 217 91% 70%;
+
+    /* Secondary - Subtle elevated surface */
+    --secondary: 220 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Success - Bright emerald green (high visibility) */
+    --success: 142 76% 55%;
+    --success-foreground: 222 47% 11%;
+
+    /* Warning - Golden amber (attention-grabbing) */
+    --warning: 38 92% 65%;
+    --warning-foreground: 222 47% 11%;
+
+    /* Muted colors - Balanced readability */
+    --muted: 220 25% 22%;
+    --muted-foreground: 215 20% 70%;
+
+    /* Accent - Vibrant cyan (pops in dark mode) */
+    --accent: 189 85% 55%;
+    --accent-foreground: 222 47% 11%;
+
+    /* Destructive - Bright red coral (clear visibility) */
+    --destructive: 0 72% 65%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Border and input - Visible but subtle */
+    --border: 220 30% 24%;
+    --input: 220 30% 24%;
+    --ring: 217 91% 65%;
+
+    /* Gradients for dark mode - Enhanced vibrancy */
+    --gradient-primary: linear-gradient(135deg,
+        hsl(217 91% 65%),
+        hsl(189 85% 55%));
+    --gradient-card: linear-gradient(180deg,
+        hsl(220 38% 14%),
+        hsl(220 38% 16%));
+    --gradient-success: linear-gradient(135deg,
+        hsl(142 76% 55%),
+        hsl(158 85% 60%));
+
+    /* Shadows for depth in dark mode - Stronger definition */
+    --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.4);
+    --shadow-md: 0 4px 8px -1px hsl(0 0% 0% / 0.5),
+      0 2px 6px -1px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 10px 20px -3px hsl(0 0% 0% / 0.6),
+      0 4px 8px -2px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 50px hsl(217 91% 65% / 0.35);
+
+    /* Status Colors - Optimized brightness for dark mode */
+    --status-active: 142 76% 55%;
+    --status-inactive: 215 20% 60%;
+    --status-transferred: 217 91% 68%;
+    --status-graduated: 262 80% 70%;
+    --status-pending: 38 92% 65%;
+
+    /* Sidebar - Deeper than background for hierarchy */
+    --sidebar-background: 222 47% 9%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 217 91% 65%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 220 30% 20%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 220 30% 18%;
+    --sidebar-ring: 217 91% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer components {
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .status-badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium transition-colors;
+  }
+
+  /* Custom sidebar scrollbar */
+  .custom-sidebar-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-sidebar-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-sidebar-scrollbar::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border) / 0.4);
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+  }
+
+  .custom-sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--border) / 0.6);
+  }
+}
+
+@layer utilities {
+
+  /* Status color utilities - Optimized for both light and dark modes */
+  .status-active {
+    @apply bg-emerald-100 text-emerald-800 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-400 dark:border-emerald-800/50;
+  }
+
+  .status-inactive {
+    @apply bg-gray-100 text-gray-800 border-gray-200 dark:bg-gray-800/40 dark:text-gray-400 dark:border-gray-700/50;
+  }
+
+  .status-transferred {
+    @apply bg-blue-100 text-blue-800 border-blue-200 dark:bg-blue-950/40 dark:text-blue-400 dark:border-blue-800/50;
+  }
+
+  .status-graduated {
+    @apply bg-purple-100 text-purple-800 border-purple-200 dark:bg-purple-950/40 dark:text-purple-400 dark:border-purple-800/50;
+  }
+
+  .status-pending {
+    @apply bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-950/40 dark:text-amber-400 dark:border-amber-800/50;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@layer components {
+  .tab-trigger {
+    @apply flex-1 flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium transition-all rounded-md data-[state=active]:bg-background data-[state=active]:shadow-sm;
+  }
+}
+
+/* Compact Mode - Reduces padding and spacing globally */
+.compact-mode {
+  --spacing-scale: 0.75;
+}
+
+.compact-mode .p-6 {
+  padding: calc(1.5rem * var(--spacing-scale));
+}
+
+.compact-mode .p-4 {
+  padding: calc(1rem * var(--spacing-scale));
+}
+
+.compact-mode .p-3 {
+  padding: calc(0.75rem * var(--spacing-scale));
+}
+
+.compact-mode .py-6 {
+  padding-top: calc(1.5rem * var(--spacing-scale));
+  padding-bottom: calc(1.5rem * var(--spacing-scale));
+}
+
+.compact-mode .py-4 {
+  padding-top: calc(1rem * var(--spacing-scale));
+  padding-bottom: calc(1rem * var(--spacing-scale));
+}
+
+.compact-mode .px-6 {
+  padding-left: calc(1.5rem * var(--spacing-scale));
+  padding-right: calc(1.5rem * var(--spacing-scale));
+}
+
+.compact-mode .px-4 {
+  padding-left: calc(1rem * var(--spacing-scale));
+  padding-right: calc(1rem * var(--spacing-scale));
+}
+
+.compact-mode .gap-6 {
+  gap: calc(1.5rem * var(--spacing-scale));
+}
+
+.compact-mode .gap-4 {
+  gap: calc(1rem * var(--spacing-scale));
+}
+
+.compact-mode .space-y-6>*+* {
+  margin-top: calc(1.5rem * var(--spacing-scale));
+}
+
+.compact-mode .space-y-4>*+* {
+  margin-top: calc(1rem * var(--spacing-scale));
+}
+
+.compact-mode h1 {
+  font-size: calc(2.25rem * var(--spacing-scale));
+}
+
+.compact-mode h2 {
+  font-size: calc(1.875rem * var(--spacing-scale));
+}
+
+.compact-mode h3 {
+  font-size: calc(1.5rem * var(--spacing-scale));
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Google Maps Autocomplete Dropdown Z-Index Fix */
+.pac-container {
+  z-index: 10000 !important;
+  pointer-events: auto !important;
+  position: fixed !important;
+  /* Ensure it stays fixed relative to viewport */
+}
+
+.pac-item {
+  cursor: pointer !important;
+}
