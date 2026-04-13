@@ -168,7 +168,7 @@ export const MODULE_INFO: Record<string, ModuleInfo> = {
   "LMS": {
     id: "LMS",
     name: "Integrated LMS",
-    description: "World-class digital learning powered by TutorCafes",
+    description: "World-class digital learning powered by TutorSmart",
     category: "academic",
     icon: "GraduationCap",
   },

@@ -49,8 +49,8 @@ export const StickyScrollFeatures = () => {
     const x = useTransform(scrollYProgress, [0, 1], ["0px", `-${Math.max(0, trackWidth - (typeof window !== "undefined" ? window.innerWidth : 0))}px`]);
 
     return (
-        <section 
-            ref={targetRef} 
+        <section
+            ref={targetRef}
             className="relative bg-slate-50 dark:bg-[#030712] mb-12"
             style={{ height: containerHeight }}
         >
@@ -221,10 +221,10 @@ export const StickyScrollFeatures = () => {
                                 </div>
                                 <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-4">Integrated LMS</h3>
                                 <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-6 max-w-md leading-relaxed">
-                                    Powered by TutorCafes, an international LMS provider. Give your students a world-class digital learning experience without the headache of jumping between platforms.
+                                    Powered by TutorSmart, an international LMS provider. Give your students a world-class digital learning experience without the headache of jumping between platforms.
                                 </p>
                                 <div className="flex flex-wrap gap-2 mt-auto">
-                                    {["TutorCafes Integration", "One-Click Login", "Global Standard", "Online Homework"].map((tag, i) => (
+                                    {["TutorSmart Integration", "One-Click Login", "Global Standard", "Online Homework"].map((tag, i) => (
                                         <span key={i} className="px-3 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-900/30">
                                             {tag}
                                         </span>

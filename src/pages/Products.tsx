@@ -234,9 +234,9 @@ const MODULE_DETAILS: Record<string, { title: string; features: string[]; benefi
     benefit: "Bridges the gap between school and home with instant, reliable communication."
   },
   "LMS": {
-    title: "Integrated LMS by TutorCafes",
+    title: "Integrated LMS by TutorSmart",
     features: [
-      "Powered by international provider TutorCafes",
+      "Powered by international provider TutorSmart",
       "Totally seamless single sign-on (SSO)",
       "World-class digital coursework and assignments",
       "Interactive multimedia learning materials"
