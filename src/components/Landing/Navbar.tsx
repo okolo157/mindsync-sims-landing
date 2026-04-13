@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { preloadCalendly } from "@/utils/calendly";
 import logoDark from "@/assets/mind-dark.png";
 import logoLight from "@/assets/mind-light.png";
+import { InteractiveBadge } from "../ui/InteractiveBadge";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -44,13 +45,16 @@ export default function Navbar() {
       <div className="flex items-center max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* LEFT — Logo */}
-        <div className="flex flex-1">
+        <div className="flex flex-1 items-center gap-3">
           <img
             src={isDark ? logoDark : logoLight}
             alt="Logo"
             onClick={() => navigate("/")}
             className="w-20 sm:w-28 h-auto cursor-pointer hover:opacity-80 transition-opacity"
           />
+          <InteractiveBadge variant="beta" className="hidden sm:inline-flex scale-90">
+            SIMS
+          </InteractiveBadge>
         </div>
 
         {/* CENTER — Desktop Navigation */}
