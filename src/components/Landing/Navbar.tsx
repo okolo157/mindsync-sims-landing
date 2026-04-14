@@ -52,7 +52,7 @@ export default function Navbar() {
             onClick={() => navigate("/")}
             className="w-20 sm:w-28 h-auto cursor-pointer hover:opacity-80 transition-opacity"
           />
-          <InteractiveBadge variant="primary" className="hidden sm:inline-flex scale-90">
+          <InteractiveBadge variant="premium" className="hidden sm:inline-flex scale-90">
             SIMS
           </InteractiveBadge>
         </div>
