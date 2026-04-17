@@ -185,18 +185,18 @@ export const PowerFeatures = () => {
                         >
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 font-semibold mb-6">
                                 <Zap className="w-4 h-4" />
-                                <span>Powerful Scheduling System</span>
+                                <span>Timetable and Scheduling</span>
                             </div>
                             <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-slate-900 dark:text-white">
-                                Symbolic AI Timetable Engine
+                                AI Timetable Engine
                             </h3>
                             <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                                Solve NP-hard scheduling problems in seconds. Our Symbolic AI engine combines constraint satisfaction with heuristic search to generate perfect, conflict-free school timetables.
+                                Solve NP-hard scheduling problems in seconds. Our AI engine combines constraint satisfaction with heuristic search to generate perfect, conflict-free school timetables.
                             </p>
 
                             <ul className="space-y-4 mb-8">
                                 {[
-                                    "Constraint-Based Symbolic AI Engine",
+                                    "Constraint-Based AI Engine",
                                     "Heuristic-Driven Optimization Logic",
                                     "Geospatial travel-time pathfinding",
                                     "Real-time Campus Occupancy & Maps"
@@ -219,7 +219,7 @@ export const PowerFeatures = () => {
                         >
                             <img
                                 src={timetableImage}
-                                alt="Symbolic AI Timetable Optimization and Campus Map"
+                                alt="AI Timetable Optimization and Campus Map"
                                 className="w-full rounded-2xl shadow-xl border border-slate-100 dark:border-white/5"
                             />
                         </motion.div>

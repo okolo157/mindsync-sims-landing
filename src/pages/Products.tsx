@@ -124,7 +124,7 @@ const MODULE_DETAILS: Record<string, { title: string; features: string[]; benefi
     benefit: "Eliminates calculation errors and reduces report card production time from weeks to seconds."
   },
   "timetable": {
-    title: "Symbolic AI Timetable Engine",
+    title: "AI Timetable Engine",
     features: [
       "AI-driven Constraint Satisfaction (CSP) engine",
       "Heuristic-based prioritization (NP-hard solver)",
@@ -133,7 +133,7 @@ const MODULE_DETAILS: Record<string, { title: string; features: string[]; benefi
       "Live Campus Map with real-time room occupancy",
       "Interactive Wizard for curriculum & constraint setup"
     ],
-    benefit: "A sophisticated Symbolic AI engine that solves institutional complexity while respecting teacher quality-of-life and spatial constraints."
+    benefit: "A sophisticated AI optimization engine that solves institutional complexity while respecting teacher quality-of-life and spatial constraints."
   },
   "calendar-events": {
     title: "School Events Calendar",
