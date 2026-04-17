@@ -98,7 +98,7 @@ export const MODULE_INFO: Record<string, ModuleInfo> = {
   "timetable": {
     id: "timetable",
     name: "Timetable",
-    description: "Symbolic AI-driven scheduling with geospatial travel-time awareness",
+    description: "AI-driven scheduling with geospatial travel-time awareness",
     category: "academic",
     icon: "Clock",
   },
