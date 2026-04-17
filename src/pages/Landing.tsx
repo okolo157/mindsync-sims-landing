@@ -136,7 +136,6 @@ const Landing: React.FC = () => {
                     src={adminsLight}
                     alt="Multicultural School Leaders collaborating in a library office"
                     loading="eager"
-                    fetchPriority="high"
                     className="block dark:hidden rounded-2xl w-full h-auto drop-shadow-[0_20px_50px_rgba(79,70,229,0.15)] border border-white/10"
                   />
 
@@ -145,7 +144,6 @@ const Landing: React.FC = () => {
                     src={adminsDark}
                     alt="Multicultural School Leaders collaborating in a library office"
                     loading="eager"
-                    fetchPriority="high"
                     className="hidden dark:block rounded-2xl w-full h-auto drop-shadow-[0_20px_50px_rgba(255,255,255,0.05)] border border-white/10"
                   />
                 </motion.div>

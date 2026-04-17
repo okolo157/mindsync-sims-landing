@@ -124,14 +124,16 @@ const MODULE_DETAILS: Record<string, { title: string; features: string[]; benefi
     benefit: "Eliminates calculation errors and reduces report card production time from weeks to seconds."
   },
   "timetable": {
-    title: "Smart Timetabling",
+    title: "Symbolic AI Timetable Engine",
     features: [
-      "Conflict-free automatic schedule generation",
-      "Teacher availability constraints",
-      "Room and resource allocation",
-      "Printable class and teacher timetables"
+      "AI-driven Constraint Satisfaction (CSP) engine",
+      "Heuristic-based prioritization (NP-hard solver)",
+      "Geospatial travel-time pathfinding between buildings",
+      "Stochastic optimization for 'Fitness Score' discovery",
+      "Live Campus Map with real-time room occupancy",
+      "Interactive Wizard for curriculum & constraint setup"
     ],
-    benefit: "Optimizes resource utilization and prevents double-booking of teachers or venues."
+    benefit: "A sophisticated Symbolic AI engine that solves institutional complexity while respecting teacher quality-of-life and spatial constraints."
   },
   "calendar-events": {
     title: "School Events Calendar",
